@@ -86,3 +86,11 @@
 # 5 5 5
 # 7 7 7 7
 # 9 9 9 9 9
+
+rows = int(input())
+num = rows
+for outer_loop in range(1,rows*2):
+    for inner_loop in range(1, outer_loop):
+            if inner_loop %2 == 1:
+                print(inner_loop, end=' ')
+    print("")
