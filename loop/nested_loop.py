@@ -87,10 +87,22 @@
 # 7 7 7 7
 # 9 9 9 9 9
 
-rows = int(input())
-num = rows
-for outer_loop in range(1,rows*2):
+# rows = int(input())
+# num = rows
+# for outer_loop in range(1,rows*2):
+#     for inner_loop in range(1, outer_loop):
+#             if inner_loop %2 == 1:
+#                 print(inner_loop, end=' ')
+#     print("")
+
+# Print reverse number from 10 to 1
+# 1
+# 3 2
+# 6 5 4
+# 10 9 8 7
+
+rows = 5
+for outer_loop in range(1, rows):
     for inner_loop in range(1, outer_loop):
-            if inner_loop %2 == 1:
-                print(inner_loop, end=' ')
-    print("")
+        print(inner_loop, end=' ')
+    print(" ")
