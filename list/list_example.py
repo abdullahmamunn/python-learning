@@ -92,3 +92,41 @@ mylists.pop(0)
 del mylists[1:2]
 mylists.clear()
 print(mylists)
+
+# Finding an element of index in the list, using index() function
+finding = [10, 20, 20, 30, 40, 50, 80]
+print(finding.index(80))
+# Concat two string
+finding2 = [800, 700, 600]
+concat = finding + finding2
+finding.extend(finding2) # First list er vitore 2nd list extends kore dichi
+print(finding)
+print(concat)
+
+# Using the copy() method
+# List operations
+# We can perform some operations over the list by using certain functions like sort(), reverse(), clear() etc.
+sorting = [1,5,3,4,10,9,100,99]
+sorting.sort()
+print(sorting)
+
+# Reverse a List using reverse()
+sorting.reverse()
+print(sorting)
+
+# print max and min value
+maxmin2 = [1, 5, 3, 4]
+print(sum(maxmin2))
+print(min(maxmin2))
+
+#with all true values
+samplelist1 = [1, 1, True]
+print("all() All True values::", all(samplelist1))
+
+#with one false
+samplelist2 = [0, 1, True, 1]
+print("all() with One false value ::", all(samplelist2))
+
+# any()
+# The any() method will return true if there is at least one true value.
+# In the case of Empty List, it will return false.
