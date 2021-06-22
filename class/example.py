@@ -17,5 +17,14 @@ class Student:
 
 
 stu = Student("Abdullah Al Mamun", 184)
+# modifying objects property
+stu.name = "Mita"
+stu.dept = "Doctor"
+# delete object of the class
+del stu.name
+del stu.dept
+
 stu.learning()
 stu.show("Mamun")
+
+# student = Student()
