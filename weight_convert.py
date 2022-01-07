@@ -7,3 +7,11 @@ if unit.upper() == "L":
 else:
     converted = weight / 0.45
     print("Your weight is {0} pounds".format(converted))
+
+# Output
+
+"""    
+    Your weight: 67
+    (L) bs or (K)g: k
+    Yourweight is 148.88888888888889 pounds
+"""

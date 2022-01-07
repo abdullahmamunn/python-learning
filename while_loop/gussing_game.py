@@ -10,3 +10,19 @@ while i < 3:
     i = i + 1
 else:
     print("You failed!")
+
+    """
+    Guess 9
+    No! incorrect guessing
+    Guess 20
+    No! incorrect guessing
+    Guess 12
+    No! incorrect guessing
+    You failed!
+    
+    Process finished with exit code 0
+    
+    Guess 10
+    Correct guessing, You Won!
+
+    """
