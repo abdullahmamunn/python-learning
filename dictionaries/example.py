@@ -2,7 +2,7 @@
 person = {
     "name": "Abdullah",
     "skill": "Python",
-    "phone": 0o54351213214,
+    "phone": 3443,
     "is_valid": True,
     "birth_date": "5 june 1995"
 }
