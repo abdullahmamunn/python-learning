@@ -1,24 +1,27 @@
-def binarySearch(arr,key):
-    left = 0
-    right = len(arr)-1
+# Implementing binary search
+#define function binary search
+
+def binarySearch(array,key):
+    start_index = 0
+    last_index = len(array)-1
     index = None
-    while left <= right:
-        mid = int((left + right)/2)
-        if key == arr[mid]:
+    while start_index <= last_index:
+        mid = int((start_index + last_index) /2)
+        if key == array[mid]:
             index = mid
-            break
-        elif key > arr[mid]:
-             left = mid + 1
-        elif key < arr[mid]:
-            right = mid - 1
+            last_index = mid - 1
+        elif key > array[mid]:
+            start_index = mid + 1
+        else:
+            last_index = mid - 1
     return index
 
 
-
-age = [10,15,50,20,30,25,19]
-age.sort()
-print(age)
+array = [12,10,10,15,12,15,5,11,11,20]
+array.sort()
+print(array)
 while True:
     key = int(input())
-    index = binarySearch(age,key)
-    print(index)
+    res = binarySearch(array,key)
+    print(res)
+
