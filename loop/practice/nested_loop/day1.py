@@ -1,80 +1,20 @@
-# Programs to print number pattern
+n = int(input())
+for i in range(1,n+1):
+    dec_num = i
+    for dec_num in range(dec_num,0,-1):
+        print(dec_num, end='')
+        dec_num = dec_num - 1
+    inc_num = 2
+    for inc_num in range(inc_num,i+1):
+        print(inc_num, end='')
+        inc_num = inc_num + 1
 
-row = 5
-for outer_loop in range(1,row+1):
-    for inner_loop in range(outer_loop):
-        print(outer_loop,end=' ')
-    print("")
-
-num = [4,2,4,1]
-for x in num:
-    print("*"*x)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# rows = 5
-# for outer_loop in range(1, rows+1):
-#     for inner_loop in range(outer_loop):
-#         print(outer_loop,end=' ')
-#     print("")
-
+    print()
 # 1
-# 1 2
-# 1 2 3
-# 1 2 3 4
-# 1 2 3 4 5
-
-# rows = 5
-# for outer_loop in range(rows+1):
-#     for inner_loop in range(1, outer_loop+1):
-#         print(inner_loop,end=" ")
-#     print("")
-
-# 1 1 1 1 1
-# 2 2 2 2
-# 3 3 3
-# 4 4
-# 5
-# print("\n")
-# rows = 5
-# num = 0
-# for outer_loop in range(rows, 0, -1):
-#     num = num + 1
-#     for inner_loop in range(outer_loop):
-#         print(num, end=' ')
-#     print("")
-# print("\n")
-# 5 5 5 5 5
-# 5 5 5 5
-# 5 5 5
-# 5 5
-# 5
-
-# rows = 5
-# for outer_loop in range(rows, 0, -1):
-#     for inner_loop in range(outer_loop):
-#         print(rows, end=' ')
-#     print("")
+# 212
+# 32123
+# 4321234
+# Look at the problem we find two pattern from second line, that is increment and decrement here one loop is using for
+# decrement like 21, 321,4321 and another one is fon
+# incremenr like 2, 23, 234 and increment loop is started form 2
+# NT: I found the idea from https://pyra idinpython.blogspot.com/2020/07/pyramid-number-pattern-print-following.html
