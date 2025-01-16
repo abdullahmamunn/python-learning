@@ -1,5 +1,5 @@
 # This program will convert your weight
-weight = int(input("Your weight: "))
+weight = float(input("Your weight: "))
 unit = input("(L)bs or (K)g: ")
 if unit.upper() == "L":
     converted = 0.45 * weight
