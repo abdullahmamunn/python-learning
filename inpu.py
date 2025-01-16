@@ -1,9 +1,11 @@
 while True:
-    num = int(input('Enter a number '))
-    if(num%2) == 0:
-        print("{0} is even".format(num))
-    else:
-        print("{0} is odd".format(num))
+  n = int(input("Enter a number: "))
+  if n%2==0:
+    print("{0} is even".format(n))
+  else:
+    print("{0} is odd".format(n))
+    
+
 
 """
 Enter a number 15
