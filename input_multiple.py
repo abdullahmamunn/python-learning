@@ -2,7 +2,7 @@
 # multiple input using split
 
 # taking two inputs at a time
-x, y = input("Enter a two value: ").split()
+x, y = nput("Enter a two value: ").split()i
 print("Number of boys: ", x)
 print("Number of girls: ", y)
 
