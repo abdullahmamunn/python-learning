@@ -45,13 +45,19 @@ def print_prime_upto_n(start, end):
 
 while True:
 
-  start, end = map(int, input("Enter start and end numbers (separated by a space): ").split())
-  if start < 2:  # Adjusting condition for start number
-      print(f"Start number must be greater than or equal to 2.")
-  elif end <= start:  # Ensuring end is greater than start
-      print(f"End number must be greater than start number.")
-  else:
-      print_prime_upto_n(start, end)
-      break  # Exit the loop after successful execution
+  try:
+      start, end = map(int, input("Enter start and end numbers (separated by a space): ").split())
+      if start < 2:  # Adjusting condition for start number
+          print(f"Start number must be greater than or equal to 2.")
+      elif end <= start:  # Ensuring end is greater than start
+          print(f"End number must be greater than start number.")
+      else:
+          print_prime_upto_n(start, end)
+          break  # Exit the loop after successful execution
 
+
+  except ValueError:
+        print("Invalid input! Please enter two numbers separated by a space.")
+
+  
 
