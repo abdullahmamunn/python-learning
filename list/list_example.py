@@ -2,25 +2,36 @@
 my_list = list((1, 2, 3))
 print(my_list)
 
+# output: [1, 2, 3]
+
 # using square brackets[]
 my_list1 = [1, 2, 3, 4]
 print(my_list1)
+
+# output: [1, 2, 3, 4]
 
 # with heterogeneous items
 mylist3 = [25, 'mamun', 52.2, True]
 print(mylist3)
 
+# Output: [25, 'mamun', 52.2, True]
+
 # empty list using list
 mylist4 = list()
 print(mylist4)
+
+# Output: []
 
 # empty list using square brackets
 mylist5 = []
 print(mylist5)
 
+# Output: []
+
 # find length of list
-length = len(my_list1)
-print(length)
+ls = [1,2.2,"mamun",False, True, 124]
+length = len(ls)
+print(f"Length is {length}")
 
 # indexing
 
@@ -33,8 +44,8 @@ list_items = [
     "Kishoreganj"
 ]
 list_items[0] = "Abdullah" # modify items
-print(len(list_items))
-print(list_items)
+print(len(list_items)) #Output: 6
+print(list_items) #Output: ['Abdullah', 24.5, 2021, 'BUBT', 'Bajitpur', 'Kishoreganj']
 
 # slicing all items
 print(list_items[0:])
