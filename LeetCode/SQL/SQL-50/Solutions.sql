@@ -16,4 +16,30 @@ Answers
   ON w1.recordDate = DATE_ADD(w2.recordDate, INTERVAL 1 DAY)
   where w1.temperature > w2.temperature
 
-10. 
+10. SELECT 
+    a1.machine_id, round(avg(a2.timestamp - a1.timestamp), 3) as processing_time  
+    FROM Activity a1
+    Join Activity a2
+    ON a1.machine_id = a2.machine_id 
+    AND a1.process_id = a2.process_id
+    AND a1.activity_type = 'start'
+    AND a2.activity_type = 'end'
+
+    Group by a1.machine_id
+
+11. select name, bonus
+    from Employee e
+    left join Bonus b
+    on e.empId = b.empId
+    where b.bonus < 1000 or b.bonus is null
+
+12. # Write your MySQL query statement below
+select s.student_id, student_name, sb.subject_name, count(e.subject_name) as attended_exams 
+from Students s
+join Subjects sb
+left join Examinations e
+on s.student_id = e.student_id and sb.subject_name = e.subject_name
+
+group by s.student_id, sb.subject_name
+order by s.student_id
+
