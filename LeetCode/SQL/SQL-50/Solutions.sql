@@ -42,4 +42,53 @@ on s.student_id = e.student_id and sb.subject_name = e.subject_name
 
 group by s.student_id, sb.subject_name
 order by s.student_id
+13. select e2.name 
+from Employee e1
+join Employee e2
+on e1.managerId = e2.id
+
+group by e2.id
+having count(*) >=5
+
+14. SELECT
+    s.user_id,
+    ifnull(round(avg(action='confirmed'),2), 0) AS confirmation_rate
+FROM Signups s
+LEFT JOIN Confirmations c ON s.user_id = c.user_id
+GROUP BY s.user_id
+
+15. select id,movie,description,rating 
+from Cinema
+where id%2=1 and description !='boring'
+order by rating desc
+
+16. # Write your MySQL query statement below
+select p.product_id,
+ifnull(round(sum(p.price*u.units)/sum(u.units),2),0) as average_price
+from Prices p
+left join UnitsSold u
+on p.product_id = u.product_id and u.purchase_date between p.start_date and p.end_date
+group by product_id
+
+17. 
+select p.project_id, round(avg(e.experience_years), 2) as average_years
+from Project p
+left join Employee e
+on p.employee_id  = e.employee_id
+group by p.project_id
+
+18. select r.contest_id,
+       round(count(r.user_id) / (select count(*) from Users) * 100, 2) as percentage
+from Register r
+group by r.contest_id
+order by percentage desc, r.contest_id asc
+
+19. 
+select query_name,
+round(avg(rating/position), 2) as quality,
+round(avg(rating <3)*100, 2) as poor_query_percentage
+from Queries 
+
+group by query_name
+
 
