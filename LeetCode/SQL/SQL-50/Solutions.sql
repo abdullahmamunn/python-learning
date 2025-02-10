@@ -91,4 +91,22 @@ from Queries
 
 group by query_name
 
+20.
+select  
+    DATE_FORMAT(trans_date , '%Y-%m') AS month, 
+    t.country as country, 
+    count(*) as trans_count, 
+    sum(case when state = 'approved' then 1 else 0 end) as approved_count,
+    sum(amount) as trans_total_amount, 
+    sum(case when state = 'approved' then amount else 0 end) as approved_total_amount
+from Transactions T
+group by month, t.country;
+
+
+21.
+22.
+23.select teacher_id, count(distinct subject_id) as cnt
+from Teacher
+group by teacher_id
+
 
