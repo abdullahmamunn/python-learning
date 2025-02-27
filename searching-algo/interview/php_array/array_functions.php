@@ -47,5 +47,6 @@ echo "Average score: $average\n";
 //     array_find(): Returns the first element matching a specified condition.
 //     array_find_key(): Retrieves the first key that meets a condition.
 //     array_any(): Checks if any elements satisfy a condition.
-//     array_all(): Confirms that all elements meet a specific condition.
+//     array_all(): Confirms that all elements meet a specific condition. 
+//     I am from PHP
 ?>
