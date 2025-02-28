@@ -1,0 +1,6 @@
+a = set('HackerRank')
+print(a)
+a.add('H')
+print(a)
+a.add('HackerRank')
+print(a)
