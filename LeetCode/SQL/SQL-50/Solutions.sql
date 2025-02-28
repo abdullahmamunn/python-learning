@@ -102,6 +102,7 @@ select
 from Transactions T
 group by month, t.country;
 
+<<<<<<< HEAD
 or 
 # Write your MySQL query statement below
 select DATE_FORMAT(trans_date, "%Y-%m") as month,
@@ -114,6 +115,8 @@ group by month, country
 
 
 
+=======
+>>>>>>> a99467d3999b629e0eeb62b72972a9412ad25923
 
 21.
 22.
