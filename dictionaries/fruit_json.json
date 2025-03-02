@@ -1,0 +1,185 @@
+// Values are per 100 grams of fruit.
+// Sources: USDA FoodData Central, Nutritionix, Healthline.
+
+{
+    "apple": {
+      "calories": 52,
+      "carbohydrates": 13.8,
+      "fiber": 2.4,
+      "sugar": 10.4,
+      "protein": 0.3,
+      "fat": 0.2,
+      "vitamins": {
+        "vitamin_C": 4.6,
+        "vitamin_A": 3,
+        "vitamin_K": 2.2
+      },
+      "minerals": {
+        "potassium": 107,
+        "calcium": 6,
+        "magnesium": 5
+      }
+    },
+    "orange": {
+      "calories": 47,
+      "carbohydrates": 11.8,
+      "fiber": 2.4,
+      "sugar": 9.4,
+      "protein": 0.9,
+      "fat": 0.1,
+      "vitamins": {
+        "vitamin_C": 53.2,
+        "vitamin_A": 225,
+        "vitamin_B6": 0.06
+      },
+      "minerals": {
+        "potassium": 181,
+        "calcium": 40,
+        "magnesium": 10
+      }
+    },
+    "banana": {
+      "calories": 89,
+      "carbohydrates": 22.8,
+      "fiber": 2.6,
+      "sugar": 12.2,
+      "protein": 1.1,
+      "fat": 0.3,
+      "vitamins": {
+        "vitamin_C": 8.7,
+        "vitamin_B6": 0.4,
+        "vitamin_A": 64
+      },
+      "minerals": {
+        "potassium": 358,
+        "calcium": 5,
+        "magnesium": 27
+      }
+    },
+    "strawberry": {
+      "calories": 32,
+      "carbohydrates": 7.7,
+      "fiber": 2.0,
+      "sugar": 4.9,
+      "protein": 0.7,
+      "fat": 0.3,
+      "vitamins": {
+        "vitamin_C": 58.8,
+        "vitamin_A": 1,
+        "vitamin_K": 2.2
+      },
+      "minerals": {
+        "potassium": 153,
+        "calcium": 16,
+        "magnesium": 13
+      }
+    },
+    "grapes": {
+      "calories": 69,
+      "carbohydrates": 18.1,
+      "fiber": 0.9,
+      "sugar": 15.5,
+      "protein": 0.7,
+      "fat": 0.2,
+      "vitamins": {
+        "vitamin_C": 3.2,
+        "vitamin_K": 14.6
+      },
+      "minerals": {
+        "potassium": 191,
+        "calcium": 10,
+        "magnesium": 7
+      }
+    },
+    "mango": {
+      "calories": 60,
+      "carbohydrates": 15.0,
+      "fiber": 1.6,
+      "sugar": 13.7,
+      "protein": 0.8,
+      "fat": 0.4,
+      "vitamins": {
+        "vitamin_C": 36.4,
+        "vitamin_A": 1082,
+        "vitamin_E": 0.9
+      },
+      "minerals": {
+        "potassium": 168,
+        "calcium": 11,
+        "magnesium": 10
+      }
+    },
+    "pineapple": {
+      "calories": 50,
+      "carbohydrates": 13.1,
+      "fiber": 1.4,
+      "sugar": 9.9,
+      "protein": 0.5,
+      "fat": 0.1,
+      "vitamins": {
+        "vitamin_C": 47.8,
+        "vitamin_A": 3,
+        "vitamin_B6": 0.1
+      },
+      "minerals": {
+        "potassium": 109,
+        "calcium": 13,
+        "magnesium": 12
+      }
+    },
+    "watermelon": {
+      "calories": 30,
+      "carbohydrates": 7.6,
+      "fiber": 0.4,
+      "sugar": 6.2,
+      "protein": 0.6,
+      "fat": 0.2,
+      "vitamins": {
+        "vitamin_C": 8.1,
+        "vitamin_A": 569,
+        "vitamin_B6": 0.1
+      },
+      "minerals": {
+        "potassium": 112,
+        "calcium": 7,
+        "magnesium": 10
+      }
+    },
+    "blueberry": {
+      "calories": 57,
+      "carbohydrates": 14.5,
+      "fiber": 2.4,
+      "sugar": 9.7,
+      "protein": 0.7,
+      "fat": 0.3,
+      "vitamins": {
+        "vitamin_C": 9.7,
+        "vitamin_A": 54,
+        "vitamin_K": 19.3
+      },
+      "minerals": {
+        "potassium": 77,
+        "calcium": 6,
+        "magnesium": 6
+      }
+    },
+    "pomegranate": {
+      "calories": 83,
+      "carbohydrates": 18.7,
+      "fiber": 4.0,
+      "sugar": 13.7,
+      "protein": 1.7,
+      "fat": 1.2,
+      "vitamins": {
+        "vitamin_C": 10.2,
+        "vitamin_K": 16.4,
+        "vitamin_B6": 0.1
+      },
+      "minerals": {
+        "potassium": 236,
+        "calcium": 10,
+        "magnesium": 12
+      }
+    }
+  }
+  
