@@ -1,59 +1,90 @@
 #nested for loop example
-# for outer_loop in range(3):
-#     for inner_loop in range(1, 3):
-#         print(outer_loop, inner_loop)
+for outer_loop in range(3):
+  for inner_loop in range(1,3):
+    print(f"{(outer_loop,inner_loop)}", end=" ")
+  
+  print()
 
-# for outer_loop in range(0, 3):
-#     for inner_loop in range(1, 4):
-#         print(outer_loop, inner_loop)
-# items = [5, 2, 5, 2, 2]
-# for item in items:
-#     print('*'*item)
+#   Output:
 
+# (0, 1) (0, 2) 
+# (1, 1) (1, 2) 
+# (2, 1) (2, 2) 
+
+
+
+for outer_loop in range(0, 3):
+    for inner_loop in range(1, 4):
+        print(outer_loop, inner_loop)
+
+# output will be:
+# 0 1
+# 0 2
+# 0 3
+# 1 1
+# 1 2 
+# 1 3
+
+items = [5, 2, 5, 2, 2]
+for item in items:
+    print('*'*item)
+
+# output:
+# *****
+# **
+# *****
+# **
+# **
+
+
+for outer_loop in range(1,6):
+    for inner_loop in range(1, outer_loop+1):
+        print(inner_loop, end=' ')
+    print("")
+
+# output:
 # 1
 # 1 2
 # 1 2 3
 # 1 2 3 4
 # 1 2 3 4 5
-# for outer_loop in range(1,6):
-#     for inner_loop in range(1, outer_loop+1):
-#         print(inner_loop, end=' ')
-#     print("")
 
+
+for outer_loop in range(1,6):
+    for inner_loop in range(1, outer_loop+1):
+        print(outer_loop, end=' ')
+    print("")
+
+# output:
 # 1
 # 2 2
 # 3 3 3
 # 4 4 4 4
 # 5 5 5 5 5
-# for outer_loop in range(1,6):
-#     for inner_loop in range(1, outer_loop+1):
-#         print(outer_loop, end=' ')
-#     print("")
 
-# 1 1 1 1 1
-# 1 1 1 1
-# 1 1 1
-# 1 1
+
+for outer_loop in range(5, 0, -1):
+    for inner_loop in range(outer_loop):
+        print('1', end=' ')
+    print('')
+
+# output:
+# 1 1 1 1 1 
+# 1 1 1 1 
+# 1 1 1 
+# 1 1 
 # 1
 
-# for outer_loop in range(5, 0, -1):
-#     for inner_loop in range(outer_loop):
-#         print('1', end=' ')
-#     print('')
+
+count = 0
+for outer_loop in range(5, 0, -1):
+    count += 1
+    for inner_loop in range(outer_loop):
+        print(count, end=' ')
+    print('')
 
 
-# 1 1 1 1 1
-# 2 2 2 2
-# 3 3 3
-# 4 4
-# 5
-
-# count = 0
-# for outer_loop in range(5, 0, -1):
-#     count += 1
-#     for inner_loop in range(outer_loop):
-#         print(count, end=' ')
-#     print('')
+#next day
 
 # 5 5 5 5 5
 # 5 5 5 5
