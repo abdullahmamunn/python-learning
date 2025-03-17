@@ -9,6 +9,6 @@ for char in s:
 for char in t:
     dict_b[char] = dict_b.get(char, 0) + 1
     
-print(dict_a == dict_b):
+print(dict_a == dict_b)
 
 

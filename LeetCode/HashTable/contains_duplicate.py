@@ -40,7 +40,8 @@ class Solution(object):
             hash_set.add(num)
         
         return False
-    
+
+  
 class Solution(object):
     def containsDuplicate(self, nums):
         hash_table = {}
