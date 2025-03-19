@@ -180,3 +180,51 @@ group by email
 having count(email) > 1
 
 -- Explanation: group by email will group the emails and having count(email) > 1 will filter the duplicate emails
+
+-- find the highest paid employee in each department 
+-- make table schema and values for relavent tables
+
+-- create
+CREATE TABLE departments (
+    department_id INT PRIMARY KEY,
+    department_name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    salary DECIMAL(10,2),
+    department_id INT,
+    FOREIGN KEY (department_id) REFERENCES departments(department_id)
+);
+
+
+-- insert
+INSERT INTO departments (department_id, department_name) VALUES
+(1, 'Engineering'),
+(2, 'Marketing'),
+(3, 'HR');
+
+INSERT INTO employees (employee_id, name, salary, department_id) VALUES
+(1, 'Alice', 80000, 1),
+(2, 'Bob', 75000, 1),
+(3, 'Charlie', 70000, 1),
+(4, 'David', 65000, 2),
+(5, 'Emma', 72000, 2),
+(6, 'Frank', 60000, 3),
+(7, 'Grace', 58000, 3);
+
+-- fetch Find the highest-paid employee(s) in each department.
+select e.employee_id, e.name, e.salary, d.department_name as department
+from employees e
+left join departments d 
+on e.department_id = d.department_id
+
+where e.salary = (select max(salary) from employees where department_id = d.department_id)
+
+--Employees salary with rank
+select e.employee_id, e.name, e.salary, d.department_name as department, RANK() over(order by e.salary DESC) as `rank`
+from employees e
+left join departments d 
+on e.department_id = d.department_id
+
