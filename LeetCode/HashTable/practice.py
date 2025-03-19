@@ -19,7 +19,7 @@ print(find_sinle_number(nums)) # 4
 
 
 # Move Zeros to end
-def moveZeroes(self, nums):
+def moveZeroes(nums):
     L = 0
     for R in range(len(nums)):
         if nums[R] !=0:
@@ -51,3 +51,52 @@ def maxSubArray(nums):
         max_sum = max(max_sum, current_sum)
         
     return max_sum
+
+
+# Rotate Array by k steps
+def rotate(nums, k):
+    k = k % len(nums)
+    nums[:] = nums[-k:] + nums[:-k]
+    return nums
+
+# exmaple
+nums = [1,2,3,4,5,6,7]
+k = 3
+print(rotate(nums, k)) # [5,6,7,1,2,3,4]
+# using loop
+def rotate(nums, k):
+    for i in range(len(nums) - k):
+        nums.insert(0, nums.pop())
+        return nums
+    
+# exmaple
+nums = [1,2,3,4,5,6,7]
+k = 3
+print(rotate(nums, k)) # [5,6,7,1,2,3,4]
+
+
+# Find the First Unique Character in a String
+def firstUniqChar(s):
+    hash_table = {}
+    for char in s:
+        hash_table[char] = hash_table.get(char, 0) + 1
+        
+    for i, char in enumerate(s):
+        if hash_table[char] == 1:
+            return i
+    return -1
+
+# in php 
+# function firstUniqChar($s) {
+#     $hash_table = [];
+#     for($i = 0; $i < strlen($s); $i++){
+#         $hash_table[$s[$i]] = ($hash_table[$s[$i]] ?? 0) + 1;
+#     }
+#     for($i = 0; $i < strlen($s); $i++){
+#         if($hash_table[$s[$i]] == 1){
+#             return $i;
+#         }
+#     }
+#     return -1;
+# }
+

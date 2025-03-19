@@ -1,27 +1,27 @@
 
-# def check_prime(number):
-#   if number <= 1:       # Numbers less than or equal to 1 are not prime
-#     return False
+def check_prime(number):
+  if number <= 1:       # Numbers less than or equal to 1 are not prime
+    return False
   
-#   for i in range(2, int(number ** 0.5) + 1):
-#     if number %i == 0:  # If divisible, it's not prime
-#       return False
+  for i in range(2, int(number ** 0.5) + 1):
+    if number %i == 0:  # If divisible, it's not prime
+      return False
   
-#   return True         # If no divisors found, it's prime
+  return True         # If no divisors found, it's prime
 
-# def print_prime_upto_n(n):
-#   print(f"Print prime number upto {n}")
-#   counter = 0;
-#   for num in range(2, n+1):  # Start from 2, as 1 is not prime
-#     if check_prime(num):
-#       print(num, end=" ")
-#       counter +=1
-#   print(f"\nTotal Prime numbers found {counter} between 1 to {n}")
+def print_prime_upto_n(n):
+  print(f"Print prime number upto {n}")
+  counter = 0;
+  for num in range(2, n+1):  # Start from 2, as 1 is not prime
+    if check_prime(num):
+      print(num, end=" ")
+      counter +=1
+  print(f"\nTotal Prime numbers found {counter} between 1 to {n}")
 
-# while True:
+while True:
 
-#   num = int(input("Enter a number: "))
-#   print_prime_upto_n(num)
+  num = int(input("Enter a number: "))
+  print_prime_upto_n(num)
 
 
 def check_prime(number):
@@ -36,7 +36,7 @@ def check_prime(number):
 
 def print_prime_upto_n(start, end):
   print(f"Prime numbers between {start} and {end}:")
-  counter = 0;
+  counter = 0
   for num in range(start, end+1):  # Start from 2, as 1 is not prime
     if check_prime(num):
       print(num, end=" ")

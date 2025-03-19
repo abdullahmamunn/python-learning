@@ -225,16 +225,45 @@ def majorityElement(nums):
         if count == 0:
             selected_num = num
         
-        if selected_num == num:
-            count +=1
-        else:
-            count -=1
-    return selected_num
+        count += 1 if num == selected_num else -1
+
+    return selected_num 
+
+# if you want to count how much time the selected number is repeared thenyou can use 
+# nums.count(elected_num)
 
 # Input: [0,3,4,2,3,3,3] 
     
 
 nums = [0, 2, 4, 2, 0, 3, 0, 1,2]
 print(majorityElement(nums))  # Output: 3
+
+
+# difference diagonal sum of matrix left to right and right to left
+
+def diagonalDifference(arr):
+    # Write your code here
+    n = len(arr)
+    left_to_right_sum = 0
+    right_to_left_sum = 0
+   
+
+    for i in range(n):
+      left_to_right_sum += arr[i][i]
+      right_to_left_sum += arr[i][n - 1 - i]
+      
+    
+    return abs(left_to_right_sum - right_to_left_sum)
+
+
+# flipping the matrix 
+def flipMatrix(matrix):
+    n = len(matrix)
+    for i in range(n):
+        matrix[i].reverse()
+    return matrix
+
+# Input: [[1,2,3],[4,5,6],[7,8,9]]
+
 
 
