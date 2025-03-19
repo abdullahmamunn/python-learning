@@ -122,3 +122,61 @@ from Teacher
 group by teacher_id
 
 
+
+-- Find the second heighest salary, if no salary then null
+-- soulution with order by and limit
+select ifnull(
+   (select distinct salary 
+from Employee
+order by salary desc
+limit 1 offset 1), null) as SecondHighestSalary
+
+-- solution with subquery
+select max(salary) as SecondHighestSalary
+from Employee
+where salary < (select max(salary) from Employee)
+
+-- Explanation: subquery will return the highest salary and then we will find the max salary which is less than the highest salary
+
+-- Rank the employees based on their salary
+selct e.emp_id, e.name, e.dept, e.salary,
+rank() over (order by e.salary desc) as rank
+from Employee e
+
+-- Explanation: rank() function will rank the employees based on their salary in descending order
+
+-- Find the nth highest salary
+select ifnull(
+   (select distinct salary
+from Employee
+order by salary desc
+limit 1 offset n-1), null) as NthHighestSalary
+
+-- Explanation: subquery will return the nth highest salary and then we will find the max salary which is less than the nth highest salary
+
+-- Filter the customer with no order
+select c.name as Customers
+from Customers c
+left join Orders o
+on c.id = o.customerId
+where o.customerId is null
+
+-- Explanation: left join will return all the customers and orders, then we will filter the customers with no orders
+
+-- find the customer with the highest order
+select c.name as Customers
+from Customers c
+join Orders o
+on c.id = o.customerId
+group by c.name
+order by sum(o.amount) desc
+
+-- Explanation: join will return all the customers and orders, then we will group by customers and order by the sum of the amount in descending order
+
+-- find duplicate emails
+select email
+from Person
+group by email
+having count(email) > 1
+
+-- Explanation: group by email will group the emails and having count(email) > 1 will filter the duplicate emails
