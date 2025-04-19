@@ -8,7 +8,7 @@ class Monster:
 
 
 class Fogthing(Monster):
-    def attack(self):
+    def attack(self):              # Overrides parent
         print('I am killing...')
 
     def make_sound(self):
